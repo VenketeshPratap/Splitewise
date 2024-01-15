@@ -1,4 +1,10 @@
 # Splitwise Application
+
+![Screenshot 2024-01-15 205411](https://github.com/VenketeshPratap/Splitewise/assets/49091267/649a4d27-60ec-44b7-baf0-8aee358921c9)
+
+<img width="814" alt="image" src="https://github.com/VenketeshPratap/Splitewise/assets/49091267/2959cedd-13e9-43c5-93d0-5b369cdcc9e4">
+
+
 ## Overview
 This is a simple expense-splitting application built with Flask and MongoDB. The application allows users to add expenses, track balances, and receive email alerts for new expenses.
 
