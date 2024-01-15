@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Splitwise App</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            text-align: center;
+            color: #3498db;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        button {
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #217dbb;
+        }
+
+        hr {
+            border: 0;
+            height: 1px;
+            background: #ddd;
+            margin: 20px 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #3498db;
+        }
+
+        #balances {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <h1>Splitwise App</h1>
+
+    <form id="expenseForm">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" name="amount" required>
+
+        <label for="paidBy">Paid By:</label>
+        <select id="paidBy" name="paidBy" required>
+          
+        </select>
+
+        <label for="splitType">Split Type:</label>
+        <select id="splitType" name="splitType" required>
+            <option value="EQUAL">Equal</option>
+            <option value="EXACT">Exact</option>
+            <option value="PERCENT">Percent</option>
+        </select>
+
+        <div id="splitOptions">
+    
+        </div>
+
+        <button type="button" onclick="addExpense()">Add Expense</button>
+    </form>
+
+    <hr>
+
+    <h2>Balance Sheet</h2>
+    <button type="button" onclick="showBalances()">Show Balances</button>
+    <div id="balances">
+      
+    </div>
+
+    <form id="userForm">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="phone_number">Phone Number:</label>
+    <input type="text" id="phone_number" name="phone_number" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <button type="button" onclick="addUser()">Add User</button>
+    </form>
+    <script src="{{ url_for('static', filename='main.js') }}"></script>
+</body>
+</html>
